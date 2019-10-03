@@ -7,13 +7,14 @@ pip install pytest-django --user
 pip install pytest-cov --user
 pip install mixer --user
 
+#### Criando o projeto
 django-admin startproject testando_django
 cd testando_django
+#### Criando a APP
 python manage.py startapp produtos
 python manage.py migrate
-# python manage.py createsuperuser
 
-# Criar a classe Produto (produtos/models.py)
+#### Criar a classe Produto (produtos/models.py)
 from django.db import models
 
 class Produto(models.Model):
