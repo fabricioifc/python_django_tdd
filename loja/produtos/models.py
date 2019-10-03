@@ -6,8 +6,7 @@ class Produto(models.Model):
 	nome = models.CharField(max_length=100)
 	descricao = models.TextField()
 	preco = models.DecimalField(
-		max_digits=5,
-		decimal_places=2
+		max_digits=5, decimal_places=2
 	)
 	quantidade = models.IntegerField()
 	publicado_em = models.DateField()
@@ -15,4 +14,9 @@ class Produto(models.Model):
 	@property
 	def tem_no_estoque(self):
 		return self.quantidade > 0
+
+	@property
+	def valor_negativo(self):
+		return self.preco < 0
+	
 	
