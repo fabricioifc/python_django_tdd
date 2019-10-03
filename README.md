@@ -1,23 +1,28 @@
 ## Brincando com TDD e DJANGO
 ### Alguns comandos e códigos úteis para o projeto
 
-# Agora vamos instalar pytest
+# Agora vamos instalar pytest e outras libs
+```
 pip install pytest --user
 pip install pytest-django --user
 pip install pytest-cov --user
 pip install mixer --user
+```
 
 #### Criando o projeto
+```
 django-admin startproject testando_django
 cd testando_django
+```
 #### Criando a APP
+```
 python manage.py startapp produtos
 python manage.py migrate
-
+```
 #### Criar a classe Produto (produtos/models.py)
+```
 from django.db import models
 
-```
 class Produto(models.Model):
     nome = models.CharField(max_length=100)
     descricao = models.TextField()
